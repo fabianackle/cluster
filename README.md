@@ -3,17 +3,18 @@
 ```
 srun --pty -n 1 -c 1 --time=01:00:00 --mem=4G bash -l
 ```
+## Creating environment from file
+```
+module mamba
+mamba env create -f nextflow.yml
+source activate nextflow
+```
 ## Terminating an interative session
 ```
 exit
 ```
-## Creating environment from file
+## Submit sumbission script
 ```
-module mamba
-mamba env create -f environment.yml
-source activate environment
-```
-## Listing available modules
-```
-module avail
+chmod +x run_cluster_test.sh
+sbatch run_cluster_test.sh
 ```
