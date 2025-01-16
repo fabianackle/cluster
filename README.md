@@ -6,7 +6,7 @@ srun --pty -n 1 -c 1 --time=01:00:00 --mem=4G bash -l
 ```
 ## Creating environment from file
 ```
-module mamba
+module load mamba
 mamba env create -f nextflow.yml
 source activate nextflow
 ```
